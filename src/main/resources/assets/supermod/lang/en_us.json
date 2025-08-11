@@ -4,7 +4,12 @@
   "item.supermod.bowling_ball": "Bowling Ball",
   "item.supermod.emre_sahin_spawn_egg": "Emre Şahin Spawn Egg",
 
+  "block.supermod.pin_holder": "Pin Holder",
   "block.supermod.bowlingium_block": "Bowlingium Block",
 
-  "itemgroup.supermod.super_mod_items": "Super Mod Items"
+  "itemgroup.supermod.super_mod_items": "Super Mod Items",
+
+  "entity.supermod.emre_sahin": "Emre Şahin",
+  "entity.supermod.pin": "Pin",
+  "entity.supermod.bowling_ball": "Bowling Ball"
 }

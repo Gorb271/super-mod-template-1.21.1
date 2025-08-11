@@ -24,6 +24,7 @@ public class ModItemGroups {
                         entries.add(new ItemStack(ModItems.BOWLINGIUM));
                         entries.add(new ItemStack(ModItems.BOWLINGBALL));
                         entries.add(new ItemStack(ModItems.EMRE_SAHIN_SPAWN_EGG));
+                        entries.add(new ItemStack(ModBLocks.PIN_HOLDER));
                     })).build());
 
 }

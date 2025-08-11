@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=west": {
+      "model": "supermod:block/pin_holder"
+    },
+    "facing=north": {
+      "model": "supermod:block/pin_holder",
+      "y": 90
+    },
+    "facing=east": {
+      "model": "supermod:block/pin_holder",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "supermod:block/pin_holder",
+      "y": 270
+    }
+  }
+}

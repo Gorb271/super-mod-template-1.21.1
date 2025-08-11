@@ -1,32 +1,47 @@
 package net.gorb.supermod.entity.custom;
 
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.data.DataTracker;
+import net.minecraft.entity.attribute.DefaultAttributeContainer;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.Arm;
 import net.minecraft.world.World;
 
-public class PinEntity extends Entity {
+import java.util.Collections;
 
-    public PinEntity(EntityType<? extends Entity> entityType, World world) {
+public class PinEntity extends LivingEntity {
+
+    public PinEntity(EntityType<? extends LivingEntity> entityType, World world) {
         super(entityType, world);
     }
-    @Override
-    protected void initDataTracker(DataTracker.Builder builder) {
 
+    public static DefaultAttributeContainer.Builder createPinAttributes() {
+        return LivingEntity.createLivingAttributes()
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 999.0)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.1d)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 0.0D)
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE,10d);
     }
 
     @Override
-    protected void readCustomDataFromNbt(NbtCompound nbt) {
-
+    public Iterable<ItemStack> getArmorItems() {
+        return Collections.emptyList();
     }
 
     @Override
-    protected void writeCustomDataToNbt(NbtCompound nbt) {
+    public ItemStack getEquippedStack(EquipmentSlot slot) {
+        return ItemStack.EMPTY;
+    }
 
+    @Override
+    public void equipStack(EquipmentSlot slot, ItemStack stack) {
+        // Leave this empty as pins don't have equipment
+    }
+
+    @Override
+    public Arm getMainArm() {
+        return Arm.RIGHT;
     }
 }
